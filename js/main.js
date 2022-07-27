@@ -1,5 +1,7 @@
 var app = new Vue ({
+
         el: '#root',
+
         data: {
                 contacts: [
                         {
@@ -164,5 +166,18 @@ var app = new Vue ({
                             ],
                         }
                     ],
+
+                    selectedContact: 0, // variabile per tenere traccia del profilo cliccato
+
+        },
+
+        methods: {
+
+                getSelectedContact(indexP) {
+                        this.selectedContact = indexP;
+                        return this.selectedContact;
+                },
+
         }
+        
 })
