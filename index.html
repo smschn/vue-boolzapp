@@ -52,52 +52,13 @@
                         </div>
                         <input class="search_input" type="text" placeholder="Cerca o inizia una nuova chat" />
                     </div>
-                    <div class="cl_contactChat">
+                    <!-- Milestone_1: ciclo il div di un contatto per creare tutti gli altri contenuti nell'array -->
+                    <div class="cl_contactChat" v-for="(contact, index) in contacts">
                         <div class="contactChat_pic">
-                            <img src="img/avatar_1.jpg" alt="Profile picture">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="Profile picture">
                         </div>
                         <div class="contactChat_info">
-                            <div class="contactChat_name">Michele</div>
-                            <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
-                            <div class="contactChat_lastTime">12:00</div>
-                        </div>
-                    </div>
-                    <div class="cl_contactChat">
-                        <div class="contactChat_pic">
-                            <img src="img/avatar_1.jpg" alt="Profile picture">
-                        </div>
-                        <div class="contactChat_info">
-                            <div class="contactChat_name">Michele</div>
-                            <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
-                            <div class="contactChat_lastTime">12:00</div>
-                        </div>
-                    </div>
-                    <div class="cl_contactChat">
-                        <div class="contactChat_pic">
-                            <img src="img/avatar_1.jpg" alt="Profile picture">
-                        </div>
-                        <div class="contactChat_info">
-                            <div class="contactChat_name">Michele</div>
-                            <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
-                            <div class="contactChat_lastTime">12:00</div>
-                        </div>
-                    </div>
-                    <div class="cl_contactChat">
-                        <div class="contactChat_pic">
-                            <img src="img/avatar_1.jpg" alt="Profile picture">
-                        </div>
-                        <div class="contactChat_info">
-                            <div class="contactChat_name">Michele</div>
-                            <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
-                            <div class="contactChat_lastTime">12:00</div>
-                        </div>
-                    </div>
-                    <div class="cl_contactChat">
-                        <div class="contactChat_pic">
-                            <img src="img/avatar_1.jpg" alt="Profile picture">
-                        </div>
-                        <div class="contactChat_info">
-                            <div class="contactChat_name">Michele</div>
+                            <div class="contactChat_name">{{contact.name}}</div>
                             <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
                             <div class="contactChat_lastTime">12:00</div>
                         </div>
