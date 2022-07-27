@@ -1,1 +1,3 @@
-console.log('test');
+var app = new Vue ({
+        el: '#root',
+})
