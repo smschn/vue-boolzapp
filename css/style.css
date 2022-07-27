@@ -244,5 +244,5 @@ main {
 
 /* classi attivate al click */
 .active_contact {
-    background-color: var(--color1);
+    background-color: var(--bg1);
 }

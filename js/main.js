@@ -169,7 +169,9 @@ var app = new Vue ({
 
                     selectedContact: 0, // variabile per tenere traccia del profilo cliccato
 
-                    newMessage: 'Scrivi un messaggio.'
+                    newMessage: 'Scrivi un messaggio.', // variabile che cattura l'input del nuovo messaggio
+
+                    search: 'Cerca', // variabile che cattura la ricerca
 
         },
 
@@ -182,11 +184,11 @@ var app = new Vue ({
                 },
 
                 // al click sull'input mi svuota il campo input
-                deletePlaceholder() {
+                deletePlaceholderNm() {
                         this.newMessage = '';
                 },
 
-                // creo un nuovo messaggio da inserire in chat (lo aggiungo in coda agli altri nell'array)
+                // Milestone_3.1: creo un nuovo messaggio da inserire in chat (lo aggiungo in coda agli altri nell'array)
                 createNewMessage() {
                         this.newMessage.trim();
                         this.contacts[this.selectedContact].messages.push({
@@ -200,13 +202,23 @@ var app = new Vue ({
                         setTimeout(this.receiveNewMessage,1000);
                 },
 
-                // funzione per ricevere il messaggio
+                // Milestone_3.2: funzione per ricevere il messaggio
                 receiveNewMessage() {
                         this.contacts[this.selectedContact].messages.push({
                                 date: 'Adesso',
                                 message: 'Ok',
                                 status: 'received'
                         });
+                },
+
+                // al click sull'input 'cerca', scompare la scritta
+                deletePlaceholderSearch() {
+                        this.search = '';
+                },
+
+                // funzione per filtrare i risultati
+                checkNameSearch() {
+
                 }
 
         }
