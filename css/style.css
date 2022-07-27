@@ -9,17 +9,19 @@
     --color1: #b1b1b1;
     --bg1: #eaeaea;
     --bg2: #8edafc;
+    --bg3: #009688;
+    --bg4: #dadbd4;
 }
 
 /* sfondo pagina */
 header {
     height: 120px;
-    background-color: #009688;
+    background-color: var(--bg3);
 }
 
 main {
     height: calc(100vh - 120px);
-    background-color: #dadbd4;
+    background-color: var(--bg4);
 }
 
 /* container */
@@ -45,7 +47,7 @@ main {
 .cl_contactChat {
     display: flex;
     padding: 10px;
-    height: 60px;
+    /*height: 60px;*/
     border: 1px solid purple;
 }
 
@@ -87,6 +89,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--bg2);
 }
 
 .notif_text {
@@ -98,6 +101,16 @@ main {
     padding: 0px 5px;
 }
 
+.notif_text p:first-child {
+    font-weight: bold;
+}
+
+.notif_text p:last-child {
+    color: gray;
+    text-decoration: underline;
+}
+
+/* cl_search */
 .cl_search {
     height: 50px;
     border: 1px solid purple;
