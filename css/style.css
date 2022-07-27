@@ -7,10 +7,12 @@
 
 :root {
     --color1: #b1b1b1;
+    --color2: gray;
     --bg1: #eaeaea;
     --bg2: #8edafc;
     --bg3: #009688;
     --bg4: #dadbd4;
+    --bg5: #fafafa;
 }
 
 /* sfondo pagina */
@@ -54,7 +56,7 @@ main {
 /* myProfile */
 .cl_myProfile {
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     background-color: #eaeaea;
 }
 
@@ -106,14 +108,32 @@ main {
 }
 
 .notif_text p:last-child {
-    color: gray;
+    color: var(--color2);
     text-decoration: underline;
 }
 
 /* cl_search */
 .cl_search {
+    padding: 10px;
     height: 50px;
     border: 1px solid purple;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg5);
+    color: var(--color2);
+}
+
+.search_icon {
+    padding: 8px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.search_input {
+    padding: 10px;
+    color: var(--color2);
+    width: 100%;
+    border: 1px solid lightgray;
 }
 
 /* contenuto a destra */
