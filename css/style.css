@@ -23,18 +23,41 @@ main {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid red;
+    border: 1px solid orange;
     display: flex;
 }
 
 /* contenuto a sinistra */
 #content_left {
-    border: 1px solid red;
+    border: 1px solid orange;
     flex-basis: calc(100% / 10 * 4);
+}
+
+.cl_myProfile,
+.cl_notifications,
+.cl_contactChat {
+    height: 100px;
+    border: 1px solid purple;
+}
+
+.cl_search {
+    height: 50px;
+    border: 1px solid purple;
 }
 
 /* contenuto a destra */
 #content_right {
-    border: 1px solid red;
+    border: 1px solid orange;
     flex-basis: calc(100% / 10 * 6);
+}
+
+.cr_contact,
+.cr_input {
+    height: 100px;
+    border: 1px solid lightcyan;
+}
+
+.cr_chat {
+    border: 1px solid purple;
+    height: calc(100% - 200px);
 }
