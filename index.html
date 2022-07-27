@@ -52,13 +52,13 @@
                         </div>
                         <input class="search_input" type="text" placeholder="Cerca o inizia una nuova chat" />
                     </div>
-                    <!-- Milestone_1: ciclo il div di un contatto per creare tutti gli altri contenuti nell'array -->
+                    <!-- Milestone_1: ciclo il div di un contatto generico per creare tutti gli altri contatti contenuti nell'array -->
                     <div class="cl_contactChat" v-for="(contact, index) in contacts">
                         <div class="contactChat_pic">
-                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt=" 'Profile picture of ' + contact.name ">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt=" 'Profile picture of ' + contact.name "> <!-- rendo dinamici gli attributi con v-bind -->
                         </div>
                         <div class="contactChat_info">
-                            <div class="contactChat_name">{{contact.name}}</div>
+                            <div class="contactChat_name">{{contact.name}}</div> <!-- per inserire un dato ciclato nell'html uso la sintassi {{..}} -->
                             <div class="contactChat_lastMsgSent">Ultimo messaggio inviato</div>
                             <div class="contactChat_lastTime">12:00</div>
                         </div>
