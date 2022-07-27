@@ -24,4 +24,17 @@ main {
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid red;
+    display: flex;
+}
+
+/* contenuto a sinistra */
+#content_left {
+    border: 1px solid red;
+    flex-basis: calc(100% / 10 * 4);
+}
+
+/* contenuto a destra */
+#content_right {
+    border: 1px solid red;
+    flex-basis: calc(100% / 10 * 6);
 }
