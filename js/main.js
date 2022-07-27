@@ -195,6 +195,18 @@ var app = new Vue ({
                                 status: 'sent'
                         });
                         this.newMessage = '';
+
+                        // Milestone_3.2: ricevo in automatico un messaggio, richiamandone la funzione apposita
+                        setTimeout(this.receiveNewMessage,1000);
+                },
+
+                // funzione per ricevere il messaggio
+                receiveNewMessage() {
+                        this.contacts[this.selectedContact].messages.push({
+                                date: 'Adesso',
+                                message: 'Ok',
+                                status: 'received'
+                        });
                 }
 
         }
