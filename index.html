@@ -55,7 +55,7 @@
                     <!-- Milestone_1: ciclo il div di un contatto per creare tutti gli altri contenuti nell'array -->
                     <div class="cl_contactChat" v-for="(contact, index) in contacts">
                         <div class="contactChat_pic">
-                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="Profile picture">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt=" 'Profile picture of ' + contact.name ">
                         </div>
                         <div class="contactChat_info">
                             <div class="contactChat_name">{{contact.name}}</div>
