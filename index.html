@@ -61,8 +61,8 @@
                             </div>
                             <div class="contactChat_info">
                                 <div class="contactChat_name">{{contact.name}}</div> <!-- per inserire un dato ciclato nell'html uso la sintassi {{..}} -->
-                                <div class="contactChat_lastMsgSent">{{contact.messages[1].message}}</div>
-                                <div class="contactChat_lastTime">{{contact.messages[1].date}}</div>
+                                <div class="contactChat_lastMsgSent">placeholder</div>
+                                <div class="contactChat_lastTime">placeholder</div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,8 @@
                             </div>
                         </div>
                         <div class="userNewMsg">
-                            <input class="newMessage" type="text" />
+                            <!-- Milestone_3: aggiungo un evento alla pressione di 'invio' che mi crea un messaggio -->
+                            <input class="newMessage" type="text" v-model="newMessage" @click="deletePlaceholder" @keyup.enter="createNewMessage" />
                         </div>
                         <div>
                             <i class="fa-solid fa-microphone"></i>

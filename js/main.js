@@ -169,15 +169,34 @@ var app = new Vue ({
 
                     selectedContact: 0, // variabile per tenere traccia del profilo cliccato
 
+                    newMessage: 'Scrivi un messaggio.'
+
         },
 
         methods: {
 
+                // funzione per eguagliare l'indice del ciclo dei contatti con la variabile del profilo cliccato
                 getSelectedContact(indexP) {
                         this.selectedContact = indexP;
                         return this.selectedContact;
                 },
 
+                // al click sull'input mi svuota il campo input
+                deletePlaceholder() {
+                        this.newMessage = '';
+                },
+
+                // creo un nuovo messaggio da inserire in chat (lo aggiungo in coda agli altri nell'array)
+                createNewMessage() {
+                        this.newMessage.trim();
+                        this.contacts[this.selectedContact].messages.push({
+                                date: 'Adesso',
+                                message: this.newMessage,
+                                status: 'sent'
+                        });
+                        this.newMessage = '';
+                }
+
         }
-        
+
 })
