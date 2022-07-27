@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* sfondo pagina */
+header {
+    height: 120px;
+    background-color: #009688;
+}
+
+main {
+    height: calc(100vh - 120px);
+    background-color: #dadbd4;
+}
+
+/* container */
+#container_wa {
+    height: calc(100vh - 40px);
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid red;
+}
