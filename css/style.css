@@ -141,7 +141,7 @@ main {
 /* cl_contactsChatsContainer */
 .cl_contactsChatsContainer {
     overflow-y: scroll;
-    max-height: calc(100% - 225px );
+    max-height: calc(100% - 180px );
 }
 
 /* cl_contactChat*/
