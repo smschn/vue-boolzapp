@@ -34,13 +34,13 @@ main {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
 }
 
 /* contenuto a sinistra */
 #content_left {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     flex-basis: calc(100% / 10 * 4);
     background-color: white;
 }
@@ -57,7 +57,8 @@ main {
 .cl_myProfile {
     justify-content: space-between;
     align-items: center;
-    background-color: #eaeaea;
+    background-color: var(--bg1);
+    height: 65px;
 }
 
 .myProfile_myData,
@@ -73,8 +74,8 @@ main {
 }
 
 .myData_pic img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -116,11 +117,11 @@ main {
 .cl_search {
     padding: 10px;
     height: 50px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     align-items: center;
     background-color: var(--bg5);
-    color: var(--color2);
+    color: var(--color1);
 }
 
 .search_icon {
@@ -131,7 +132,7 @@ main {
 
 .search_input {
     padding: 10px;
-    color: var(--color2);
+    color: var(--color1);
     width: 100%;
     border: 1px solid lightgray;
 }
@@ -163,21 +164,19 @@ main {
 
 /* contenuto a destra */
 #content_right {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     flex-basis: calc(100% / 10 * 6);
 }
 
 .cr_contact,
 .cr_input {
-    height: 60px;
-    border: 1px solid lightcyan;
+    height: 65px;
+    font-size: 0.8rem;
+    /* border: 1px solid lightcyan; */
 }
 
 .cr_chat {
-    border: 1px solid purple;
-    height: calc(100% - 60px - 60px);
-}
-
-#trpv {
-    overflow-y: scroll;
+    /* border: 1px solid purple; */
+    height: calc(100% - 130px);
+    background-image: url('../img/mine.jpg');
 }
