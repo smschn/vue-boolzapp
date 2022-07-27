@@ -8,6 +8,7 @@
 :root {
     --color1: #b1b1b1;
     --bg1: #eaeaea;
+    --bg2: #8edafc;
 }
 
 /* sfondo pagina */
@@ -44,10 +45,11 @@ main {
 .cl_contactChat {
     display: flex;
     padding: 10px;
-    height: 70px;
+    height: 60px;
     border: 1px solid purple;
 }
 
+/* myProfile */
 .cl_myProfile {
     justify-content: space-between;
     align-content: center;
@@ -72,6 +74,30 @@ main {
     border-radius: 50%;
 }
 
+/* cl_notifications */
+.cl_notifications {
+    background-color: var(--bg2);
+}
+
+.notif_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notif_text {
+    font-size: 0.8rem;
+}
+
+.notif_icon,
+.notif_text {
+    padding: 0px 5px;
+}
+
 .cl_search {
     height: 50px;
     border: 1px solid purple;
@@ -85,11 +111,11 @@ main {
 
 .cr_contact,
 .cr_input {
-    height: 100px;
+    height: 60px;
     border: 1px solid lightcyan;
 }
 
 .cr_chat {
     border: 1px solid purple;
-    height: calc(100% - 200px);
+    height: calc(100% - 60px - 60px);
 }
