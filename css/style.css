@@ -127,14 +127,14 @@ main {
 .search_icon {
     padding: 8px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bg5);
 }
 
 .search_input {
     padding: 10px;
     color: var(--color1);
     width: 100%;
-    border: 1px solid lightgray;
+    border: 1px solid var(--bg5);
 }
 
 /* cl_contactChat*/
@@ -171,12 +171,34 @@ main {
 .cr_contact,
 .cr_input {
     height: 65px;
-    font-size: 0.8rem;
     /* border: 1px solid lightcyan; */
+}
+
+.contactChat_selected {
+    font-size: 0.8rem;
 }
 
 .cr_chat {
     /* border: 1px solid purple; */
     height: calc(100% - 130px);
     background-image: url('../img/mine.jpg');
+    overflow-y: scroll;
+}
+
+.cr_input {
+    color: var(--color2);
+    background-color: var(--bg1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.userNewMsg,
+.userNewMsg_input {
+    width: 100%;
+    padding: 10px;
+}
+
+.userNewMsg_input {
+    border: 1px solid var(--bg1);
 }
