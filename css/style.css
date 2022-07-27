@@ -138,6 +138,12 @@ main {
     border: 1px solid var(--bg5);
 }
 
+/* cl_contactsChatsContainer */
+.cl_contactsChatsContainer {
+    overflow-y: scroll;
+    max-height: calc(100% - 225px );
+}
+
 /* cl_contactChat*/
 .cl_contactChat {
     background-color: white;

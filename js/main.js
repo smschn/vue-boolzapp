@@ -90,7 +90,7 @@ var app = new Vue ({
                             avatar: '_5',
                             visible: true,
                             messages: [
-                            {
+                                {
                                 date: '10/01/2020 15:30:55',
                                 message: 'Ricordati di chiamare la nonna',
                                 status: 'sent'
