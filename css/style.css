@@ -13,6 +13,7 @@
     --bg3: #009688;
     --bg4: #dadbd4;
     --bg5: #fafafa;
+    --bg6: #d5f9ba;
 }
 
 /* sfondo pagina */
@@ -174,17 +175,49 @@ main {
     /* border: 1px solid lightcyan; */
 }
 
+/* parte superiore */
+
 .contactChat_selected {
     font-size: 0.8rem;
 }
 
+/* parte centrale */
 .cr_chat {
     /* border: 1px solid purple; */
     height: calc(100% - 130px);
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
+    padding: 20px;
 }
 
+#content_right .msg {
+    width: calc(100% / 3);
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    clear: both;
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
+.msg_sent {
+    float: right;
+    background-color: var(--bg6);
+}
+
+.msg_received {
+    float: left;
+    background-color: #fff;
+}
+
+.msg.time {
+    color: var(--color1);
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/* parte inferiore */
 .cr_input {
     color: var(--color2);
     background-color: var(--bg1);
