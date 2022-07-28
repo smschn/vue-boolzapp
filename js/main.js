@@ -216,11 +216,42 @@ var app = new Vue ({
                         this.search = '';
                 },
 
-                // funzione per filtrare i risultati
-                checkNameSearch() {
+                // Milestone_4: funzione per filtrare i risultati
+                searchContact() {
+
+                    let prova;
+                    prova = this.search.toLowerCase();
+                    console.log(prova)
+
+                    this.contacts.forEach((contact) => {
+                        console.log(contact)
+                        console.log(contact.name)
+                        console.log(contact.name.toLowerCase())
+                        if (contact.name.toLowerCase().includes(prova)) {
+                            contact.visible = true;
+                        } else {
+                            contact.visible = false;
+                        };
+                        console.log(contact.visible)
+                    });
 
                 }
 
         }
 
 })
+
+/*
+  for (var i = 0; i < cards.length; i++) {
+    // If the text is within the card...
+    if(cards[i].innerText.toLowerCase()
+      // ...and the text matches the search query...
+      .includes(search_query.toLowerCase())) {
+        // ...remove the `.is-hidden` class.
+        cards[i].classList.remove("is-hidden");
+    } else {
+      // Otherwise, add the class.
+      cards[i].classList.add("is-hidden");
+    }
+  }
+*/

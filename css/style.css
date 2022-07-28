@@ -245,3 +245,8 @@ main {
 .active_contact {
     background-color: var(--bg1);
 }
+
+/* classe per nascondere gli elementi della ricerca */
+.is_hidden {
+    display: none;
+}
