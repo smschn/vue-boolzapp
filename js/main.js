@@ -173,6 +173,8 @@ var app = new Vue ({
 
                     search: 'Cerca', // variabile che cattura la ricerca
 
+                    DateTime: luxon.DateTime,
+
         },
 
         methods: {
@@ -192,7 +194,7 @@ var app = new Vue ({
                 createNewMessage() {
                         this.newMessage.trim();
                         this.contacts[this.selectedContact].messages.push({
-                                date: 'Adesso',
+                                date: this.getDate(), // Bonus: data e ora del messaggio sono reali
                                 message: this.newMessage,
                                 status: 'sent'
                         });
@@ -205,7 +207,7 @@ var app = new Vue ({
                 // Milestone_3.2: funzione per ricevere il messaggio
                 receiveNewMessage() {
                         this.contacts[this.selectedContact].messages.push({
-                                date: 'Adesso',
+                                date: this.getDate(), // Bonus: vedi sopra
                                 message: 'Ok',
                                 status: 'received'
                         });
@@ -227,6 +229,13 @@ var app = new Vue ({
                         }
                     });
                 },
+
+                // Bonus: aggiunta funzione che ritorna l'ora corrente usando la libreria luxon
+                getDate() {
+                    let dateTime = luxon.DateTime;
+                    const ora = dateTime.now().toFormat('dd/LL/y - hh:mm');
+                    return ora;
+                }
                 
         }
 
