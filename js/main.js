@@ -173,6 +173,8 @@ var app = new Vue ({
 
                     search: 'Cerca', // variabile che cattura la ricerca
 
+                    isVisibile: true,
+
         },
 
         methods: {
@@ -227,16 +229,32 @@ var app = new Vue ({
                         console.log(contact)
                         console.log(contact.name)
                         console.log(contact.name.toLowerCase())
+
                         if (contact.name.toLowerCase().includes(prova)) {
                             contact.visible = true;
+                        console.log(contact.visible)
+
+                            return
                         } else {
                             contact.visible = false;
-                        };
                         console.log(contact.visible)
+
+                            return
+                        }
                     });
+
 
                 }
 
         }
 
 })
+
+/*
+                            let prova2 = document.querySelectorAll('.cl_contactChat');
+                            for (let i = 0; i < prova2.length; i++) {
+                                if (contact.visible == false) {
+                                    prova2[i].classList.add('is_hidden');
+                                }
+                            }
+                            */
