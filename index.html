@@ -51,7 +51,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                         <!-- Milestone_4: aggiunti eventi al click e alla pressione del tasto invio per la ricerca del nome -->
-                        <input class="search_input" type="text" v-model="search" v-on:click="deletePlaceholderSearch" @keyup.enter="searchContact"/>
+                        <input class="search_input" type="text" v-model="search" v-on:click="deletePlaceholderSearch" @keyup.enter="filterContacts"/>
                     </div>
 
                     <div class="cl_contactsChatsContainer">
@@ -129,7 +129,7 @@
 
     <!-- Libreria per le date -->
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script> 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>

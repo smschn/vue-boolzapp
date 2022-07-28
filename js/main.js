@@ -219,7 +219,7 @@ var app = new Vue ({
                 },
 
                 // Milestone_4: funzione per filtrare i risultati
-                searchContact() {
+                filterContacts() {
                     const lettersSearched = this.search.toLowerCase();
                     this.contacts.forEach((contact) => {
                         if (contact.name.toLowerCase().includes(lettersSearched)) {
