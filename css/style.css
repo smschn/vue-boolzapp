@@ -216,11 +216,10 @@ main {
     background-color: #fff;
 }
 
-.msg.time {
+.msg_time {
     color: var(--color1);
-    display: inline;
-    margin: 0;
-    padding: 0;
+    text-align: right;
+    font-size: 0.7rem;
 }
 
 /* parte inferiore */

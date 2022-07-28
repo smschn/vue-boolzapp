@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="contactChat_selected">
                                     <!-- Rendo dinamico il nome -->
-                                    <div class="contactChat_name">{{contacts[getSelectedContact(selectedContact)].name}}</div>
+                                    <div class="contactChat_name">{{contacts[selectedContact].name}}</div>
                                     <div class="contactChat_lastMsgSent">Ultimo accesso oggi</div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                         <!-- Milestone_2: aggiunta visualizzazione dinamica dei messaggi in base al contatto scelto -->
                         <div v-for="message in contacts[selectedContact].messages" class="msg" v-bind:class=" (message.status=='sent')?'msg_sent':'msg_received' ">
                             <p>{{message.message}}</p>
-                            <p class="msg time">{{message.date}}</p>
+                            <p class="msg_time">{{message.date}}</p>
                         </div>
                     </div>
                     <div class="cr_input">
