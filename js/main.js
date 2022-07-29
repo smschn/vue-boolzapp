@@ -233,7 +233,7 @@ var app = new Vue ({
                 // Bonus: aggiunta funzione che ritorna l'ora corrente usando la libreria Luxon
                 getDate() {
                     const DateTime = luxon.DateTime; // richiamo Luxon
-                    const currentTime = DateTime.now().toFormat('hh:mm - dd/LL'); // imposto data+ora corrente e le formatto
+                    const currentTime = DateTime.now().toFormat('hh:mm - dd/LL'); // richiamo data, ora correnti e le formatto
                     return currentTime;
                 },
 
