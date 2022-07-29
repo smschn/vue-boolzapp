@@ -173,6 +173,12 @@ var app = new Vue ({
 
                     search: 'Cerca', // variabile che cattura la ricerca
 
+                    // dinamicizzo nome e avatar dell'utente
+                    user: {
+                        name: 'Anna',
+                        avatar: '_io'
+                    },
+
         },
 
         methods: {

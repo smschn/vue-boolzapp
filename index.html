@@ -26,10 +26,11 @@
 
                     <div class="cl_myProfile">
                         <div class="myProfile_myData">
+                            <!-- Bonus: dinamicizzato profilo personale -->
                             <div class="myData_pic">
-                                <img src="img/avatar_io.jpg" alt="My profile pic" />
+                                <img v-bind:src=" 'img/avatar' + user.avatar + '.jpg' " alt="My profile picture" />
                             </div>
-                            <div class="myData_name">Sofia</div>
+                            <div class="myData_name">{{ user.name }}</div>
                         </div>
                         <div class="myProfile_icons">
                             <i class="fa-solid fa-circle-notch"></i>
