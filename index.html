@@ -102,9 +102,10 @@
                     </div>
                     <div class="cr_chat">
                         <!-- Milestone_2: aggiunta visualizzazione dinamica dei messaggi in base al contatto scelto -->
-                        <div v-for="message in contacts[selectedContact].messages" class="msg" v-bind:class=" (message.status=='sent')?'msg_sent':'msg_received' ">
+                        <div v-for="(message, index) in contacts[selectedContact].messages" class="msg" v-bind:class=" (message.status=='sent')?'msg_sent':'msg_received' " @click="showMsgMenu(index)">
                             <p>{{ message.message }}</p>
                             <p class="msg_time">{{ getNewFormattedDates(message.date) }}</p> <!-- Bonus: formatto le date richiamando la funzione -->
+                            <div class="msg_deleteMenu is_hidden" @click="deleteMsg(index)">Elimina messaggio</div>
                         </div>
                     </div>
                     <div class="cr_input">

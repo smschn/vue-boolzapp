@@ -206,6 +206,10 @@ main {
     font-size: 0.8rem;
 }
 
+.msg {
+    position: relative;
+}
+
 .msg_sent {
     float: right;
     background-color: var(--bg6);
@@ -247,6 +251,16 @@ main {
 }
 
 /* classe per nascondere gli elementi della ricerca */
+
+
+/* menu per eliminare il messaggio */
+.msg_deleteMenu {
+    padding: 10px;
+    position: absolute;
+    bottom: -20px;
+    background-color: red;
+}
+
 .is_hidden {
     display: none;
 }
