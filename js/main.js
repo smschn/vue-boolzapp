@@ -221,7 +221,7 @@ var app = new Vue ({
                 // Milestone_4: funzione per filtrare i risultati
                 filterContacts() {
                     const lettersSearched = this.search.toLowerCase();
-                    this.contacts.forEach((contact) => {
+                    this.contacts.forEach(contact => {
                         if (contact.name.toLowerCase().includes(lettersSearched)) {
                             contact.visible = true;
                         } else {
@@ -230,13 +230,32 @@ var app = new Vue ({
                     });
                 },
 
-                // Bonus: aggiunta funzione che ritorna l'ora corrente usando la libreria luxon
+                // Bonus: aggiunta funzione che ritorna l'ora corrente usando la libreria Luxon
                 getDate() {
-                    let dateTime = luxon.DateTime;
-                    const ora = dateTime.now().toFormat('dd/LL/y - hh:mm');
-                    return ora;
+                    const DateTime = luxon.DateTime; // richiamo Luxon
+                    const currentTime = DateTime.now().toFormat('hh:mm - dd/LL'); // imposto data+ora corrente e le formatto
+                    return currentTime;
+                },
+
+                // Bonus: aggiunta funzione che cambia formato delle date riportate in 'date'
+                getNewFormattedDates() {
+                    let newDateFormat;
+                    this.contacts.forEach(contact => {
+                        for (let i = 0; i < contact.messages.length; i++) {
+                            const DateTime = luxon.DateTime; // richiamo Luxon
+                            newDateFormat = DateTime.fromFormat(contact.messages[i].date, "dd/MM/yyyy hh:mm:ss").toFormat('hh:mm - dd/LL');
+                            contact.messages[i].date = newDateFormat;
+                        }
+                    })
                 }
-                
+
+        },
+
+        // Bonus: una volta caricati tutti i 'data' di Vue, ma prima di modificare il DOM, cambio formattazione delle date..
+        // ..attraverso l'uso dell'hook 'created'
+        // ..così le date compaiono nel DOM con la nuova formattazione
+        created: function() {
+            this.getNewFormattedDates();
         }
 
 })
