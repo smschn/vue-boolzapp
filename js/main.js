@@ -189,7 +189,7 @@ var app = new Vue ({
                 },
 
                 // Milestone_3.1: creo un nuovo messaggio da inserire in chat (lo aggiungo in coda agli altri nell'array)
-                createNewMessage() {
+                sendNewMessage() {
                         this.newMessage.trim();
                         this.contacts[this.selectedContact].messages.push({
                                 date: this.getDate(), // Bonus: data e ora del messaggio sono reali
