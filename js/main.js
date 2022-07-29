@@ -173,8 +173,6 @@ var app = new Vue ({
 
                     search: 'Cerca', // variabile che cattura la ricerca
 
-                    DateTime: luxon.DateTime,
-
         },
 
         methods: {
