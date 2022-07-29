@@ -57,7 +57,9 @@
                     <div class="cl_contactsChatsContainer">
                         <!-- Milestone_1: ciclo il div di un contatto generico per creare tutti gli altri contatti contenuti nell'array -->
                         <!-- Milestone_2: con v-bind aggiungo uno sfondo grigio sull'elemento cliccato -->
-                        <!-- Milestone_4: aggiungendo un'altra condizione al v-bind:class; oppure avrei potuto inserire: v-if="contact.visible==true" al posto del secondo v-bind; -->
+                        <!-- Milestone_4: aggiungo una seconda condizione al v-bind:class;..
+                            ..oppure avrei potuto inserire, al posto del secondo v-bind:
+                            ..quanto segue: v-if="contact.visible==true"; -->
                         <div class="cl_contactChat" v-for="(contact, index) in contacts" @click="getSelectedContact(index)" v-bind:class=" [selectedContact!=index?'':'active_contact', contact.visible?'':'is_hidden'] ">
                             <div class="contactChat_pic">
                                 <!-- Rendo dinamici gli attributi con v-bind -->
@@ -65,8 +67,8 @@
                             </div>
                             <div class="contactChat_info">
                                 <!-- Per inserire in html un dato ciclato uso la sintassi {{..}} -->
-                                <div class="contactChat_name">{{contact.name}}</div>
-                                <div class="contactChat_lastMsgSent">{{contact.visible}}</div>
+                                <div class="contactChat_name">{{ contact.name }}</div>
+                                <div class="contactChat_lastMsgSent">{{ contact.visible }}</div>
                                 <div class="contactChat_lastTime">placeholder</div>
                             </div>
                         </div>
@@ -86,7 +88,7 @@
                                 </div>
                                 <div class="contactChat_selected">
                                     <!-- Rendo dinamico il nome -->
-                                    <div class="contactChat_name">{{contacts[selectedContact].name}}</div>
+                                    <div class="contactChat_name">{{ contacts[selectedContact].name }}</div>
                                     <div class="contactChat_lastMsgSent">Ultimo accesso oggi</div>
                                 </div>
                             </div>
@@ -100,8 +102,8 @@
                     <div class="cr_chat">
                         <!-- Milestone_2: aggiunta visualizzazione dinamica dei messaggi in base al contatto scelto -->
                         <div v-for="message in contacts[selectedContact].messages" class="msg" v-bind:class=" (message.status=='sent')?'msg_sent':'msg_received' ">
-                            <p>{{message.message}}</p>
-                            <p class="msg_time">{{message.date}}</p>
+                            <p>{{ message.message }}</p>
+                            <p class="msg_time">{{ getNewFormattedDates(message.date) }}</p> <!-- Bonus: formatto le date richiamando la funzione -->
                         </div>
                     </div>
                     <div class="cr_input">

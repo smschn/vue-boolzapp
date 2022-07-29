@@ -235,25 +235,15 @@ var app = new Vue ({
                     return currentTime;
                 },
 
-                // Bonus: aggiunta funzione che cambia formato delle date riportate in 'date'
-                getNewFormattedDates() {
-                    let newDateFormat;
-                    this.contacts.forEach(contact => {
-                        for (let i = 0; i < contact.messages.length; i++) {
-                            const DateTime = luxon.DateTime; // richiamo Luxon
-                            newDateFormat = DateTime.fromFormat(contact.messages[i].date, "dd/MM/yyyy hh:mm:ss").toFormat('hh:mm - dd/LL');
-                            contact.messages[i].date = newDateFormat;
-                        }
-                    })
+                // Bonus: aggiunta funzione che cambia formato delle date riportate in 'date'..
+                // ..accettando come parametro le date ciclate da Vue nell'html
+                getNewFormattedDates(parameter) {
+                    const DateTime = luxon.DateTime; // richiamo Luxon
+                    let newDateFormat = DateTime.fromFormat(parameter, "dd/MM/yyyy hh:mm:ss").toFormat('hh:mm - dd/LL');
+                    parameter = newDateFormat;
+                    return parameter;
                 }
 
         },
-
-        // Bonus: una volta caricati tutti i 'data' di Vue, ma prima di modificare il DOM, cambio formattazione delle date..
-        // ..attraverso l'uso dell'hook 'created'
-        // ..così le date compaiono nel DOM con la nuova formattazione
-        created: function() {
-            this.getNewFormattedDates();
-        }
 
 })
