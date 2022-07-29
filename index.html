@@ -69,8 +69,8 @@
                             <div class="contactChat_info">
                                 <!-- Per inserire in html un dato ciclato uso la sintassi {{..}} -->
                                 <div class="contactChat_name">{{ contact.name }}</div>
-                                <div class="contactChat_lastMsgSent">{{ contact.visible }}</div>
-                                <div class="contactChat_lastTime">placeholder</div>
+                                <div class="contactChat_lastMsgSent">{{ contact.messages[contact.messages.length-1].message }}</div> <!-- Milestone_5, parte 2 -->
+                                <div class="contactChat_lastTime">{{ contact.messages[contact.messages.length-1].date }}</div> <!-- Milestone_5, parte 2 -->
                             </div>
                         </div>
                     </div>
