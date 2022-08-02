@@ -253,15 +253,12 @@ var app = new Vue ({
 
                 // Milestone_5.1
                 showMsgMenu(indexP) {
-                    console.log(indexP);
                     let allMessagesInChat = document.getElementsByClassName('msg_deleteMenu');
-                    console.log(allMessagesInChat);
                     allMessagesInChat[indexP].classList.toggle('is_hidden');
                 },
 
                 // Milestone_5.1
                 deleteMsg(indexP) {
-                    console.log(indexP)
                     console.log(this.contacts[this.selectedContact].messages[indexP])
                     this.contacts[this.selectedContact].messages.splice(indexP, 1);
                 }
